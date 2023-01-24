@@ -1,6 +1,22 @@
 #include "sort.h"
 
 /**
+ * swap - a utility function to swap two elements
+ *
+ * @a: first element
+ * @b: second element
+ * Return: void
+ */
+void swap(int *a, int *b)
+{
+    int tmp;
+
+    tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+/**
  * bubble_sort - sort an array using bubble sort
  * algo
  * 
@@ -10,8 +26,7 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-    unsigned int i;
-    unsigned int j;
+    unsigned int i, j;
     
     if (!array || !size || size == 1)
     {
@@ -22,13 +37,10 @@ void bubble_sort(int *array, size_t size)
     {
         for (j = 0; j < size - 1; j++)
         {
-            int temp = 0;
             if (array[j] > array[j + 1])
             {
                 /*swap the elements of array*/
-                temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
+                swap(&array[j], &array[j+ 1]);
                 print_array(array, size);
             }
             
