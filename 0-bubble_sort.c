@@ -10,7 +10,7 @@
 void swap(int *a, int *b)
 {
     int tmp;
-
+    
     tmp = *a;
     *a = *b;
     *b = tmp;
@@ -19,7 +19,7 @@ void swap(int *a, int *b)
 /**
  * bubble_sort - sort an array using bubble sort
  * algo
- * 
+ *
  * @array: array to sort
  * @size: size of array
  * Return: void , just print each iteration of sorting
@@ -32,7 +32,6 @@ void bubble_sort(int *array, size_t size)
     {
         return;
     }
-    
     for (i = 0; i < size; i++)
     {
         for (j = 0; j < size - 1; j++)
